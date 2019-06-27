@@ -26,12 +26,13 @@ SECRET_KEY = 'h(#p#l6hd*r7!)jfr%(d^r&&pc&b39o*z84%3l4t)1ug)zm5au'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['seraxis.org', '71.19.146.168']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'djangosecure',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rango',
+    'sslserver',
 ]
 
 MIDDLEWARE = [
@@ -114,6 +116,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+SECURE_SSL_REDIRECT = True
 
 
 # Static files (CSS, JavaScript, Images)
