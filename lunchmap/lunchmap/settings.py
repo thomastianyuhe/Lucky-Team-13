@@ -30,7 +30,7 @@ SECRET_KEY = 'h(#p#l6hd*r7!)jfr%(d^r&&pc&b39o*z84%3l4t)1ug)zm5au'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['seraxis.org', '71.19.146.168']
+ALLOWED_HOSTS = ['seraxis.org', '71.19.146.168', '127.0.0.1', 'localhost']
 
 
 # Application definition
