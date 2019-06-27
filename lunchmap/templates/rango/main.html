@@ -1,53 +1,57 @@
-﻿<section>
-    <h1>Lunch Map</h1>
-    <p>
-        Let's vote for our lunch destinations ٩(◕‿◕)۶
-    </p>
-</section>
-<div class="mapouter">
-    <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=JP%20Morgan%20glasgow&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.enable-javascript.net">enable-javascript.net</a></div>
-    <style>
-        .mapouter {
-            position: relative;
-            text-align: right;
-            height: 500px;
-            width: 600px;
-        }
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
 
-        .gmap_canvas {
-            overflow: hidden;
-            background: none !important;
-            height: 500px;
-            width: 600px;
-        }
-    </style>
-</div>
 
-<div id="checkboxes">
-    <header>
-        <h1>Lunch Options</h1>
-    </header>
-    <ul>
-        <li><input type="checkbox"> option 1</li>
-        <li><input type="checkbox"> option 2</li>
-        <li><input type="checkbox"> option 3</li>
-        <li><input type="checkbox"> options 4</li>
-    </ul>
-    <form>
-        <header>
-            <h1>New Lunch Option</h1>
-        </header>
-        <input type="text" name="newlunchopt"><br>
-        <input type="submit" value="Submit">
-    </form>
-</div>
+
 
 <div class="container">
-    <header>
-        <h1>Ranking</h1>
-    </header>
-    <div class="wrapper">
-        <table>
+    <div class="row">
+        <h1>Lunch Map</h1>
+    </div>
+    <div class="row">
+        <section class="col-sm-8">
+
+            <p>
+                Let's vote for our lunch destinations ٩(◕‿◕)۶
+            </p>
+        </section>
+        <header class="col-sm-4">
+            <h3>Ranking</h3>
+        </header>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=JP%20Morgan%20glasgow&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.enable-javascript.net">enable-javascript.net</a></div>
+                <style>
+                    .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 500px;
+                        width: 600px;
+                    }
+
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 500px;
+                        width: 600px;
+                    }
+                </style>
+            </div>
+        </div>
+        <table class="col-sm-4">
+
+
+
             <thead>
                 <tr>
                     <th>Rank</th>
@@ -69,9 +73,32 @@
 
 
                 </tr>
-      
+
             </tbody>
         </table>
+
+</div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div id="checkboxes">
+
+                <label>Lunch Options</label>
+                    <ul >
+                        <li><input type="checkbox"> option 1</li>
+                        <li><input type="checkbox"> option 2</li>
+                        <li><input type="checkbox"> option 3</li>
+                        <li><input type="checkbox"> options 4</li>
+                    </ul>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <form>
+                <header>
+                    <label>New Lunch Option</label>
+                </header>
+                <input type="text" name="newlunchopt"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
     </div>
 </div>
-
