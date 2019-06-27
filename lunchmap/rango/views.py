@@ -6,6 +6,7 @@ def main(request):
     return render(request, 'rango/main.html', response)
 
 def placePut(request):
+    resp = {}
     if request.method == 'POST':
         place = request.POST
         placeinstance = Place(googleid= place.get("id"), address= place.get("adress"),
@@ -13,4 +14,4 @@ def placePut(request):
                               rating= place.get("rating"))
         placeinstance.save()
         print("Created: " + str(placeinstance))
-    return render('rango/main.html')
+    return render(request, 'rango/main.html', resp)
