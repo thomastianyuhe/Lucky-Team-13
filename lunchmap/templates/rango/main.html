@@ -2,23 +2,37 @@
 
 <html lang="en">
 <header>
-  <title>Lunch!</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</header>
+    <title>Lunch!</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-<style>
+    <style>
 * {
-background-color: rgb(190,190,190);
+    font-family:tahoma;
+    background-color:rgb(253, 252, 252);
 }
 
 h1 {
-    color: blue;
+    background-image: url("burger.jpg");
+    padding:50px;
+    font-size:80px;
+    color: white;
     }
+
+#ranking-table td, #ranking-table th, #ranking-table tr, #ranking-table h3 {
+background-color:white;
+padding:10px;
+}
+
+
 </style>
+
+</header>
+
+
 
 
 
@@ -26,24 +40,22 @@ h1 {
 
 <div class="container">
     <div class="row">
-
         <h1 class = "text-center">Lunch Map</h1>
     </div>
+
     <div class="row">
         <section class="col-sm-8">
-
-            <p>
-                Let's vote for our lunch destinations ٩(◕‿◕)۶
-            </p>
+            <p>Let's vote for our lunch destinations ٩(◕‿◕)۶</p>
         </section>
-        <header class="col-sm-4">
-            <h3 class="text-center">Ranking</h3>
-        </header>
+
     </div>
+
     <div class="row">
         <div class="col-sm-8">
             <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=restaurants&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.enable-javascript.net">enable-javascript.net</a></div>
+                <div class="gmap_canvas"><iframe frameborder="0" height="500" id="gmap_canvas" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=JP%20Morgan%20glasgow&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600"></iframe><a href="https://www.enable-javascript.net">enable-javascript.net</a>
+                </div>
+
                 <style>
                     .mapouter {
                         position: relative;
@@ -61,18 +73,17 @@ h1 {
                 </style>
             </div>
         </div>
-        <table class="col-sm-4">
 
-
-
-            <thead>
+        <div id="ranking-table">
+            <header class="col-sm-4">
+                <h3 class="text-center">Rankings</h3>
+            </header>
+            <table class="col-sm-4" >
                 <tr>
                     <th>Rank</th>
                     <th>Place</th>
                     <th>Votes</th>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
                     <td class="rank">1</td>
                     <td class="place">KFC</td>
@@ -83,19 +94,18 @@ h1 {
                     <td class="rank">2</td>
                     <td class="place">Pret</td>
                     <td class="votes">8</td>
-
-
                 </tr>
+                </tbody>
+            </table>
+        </div>
 
-            </tbody>
-        </table>
+    </div>
 
-</div>
-    <div class="row">
-        <div class="col-sm-4">
+    <div class="row" style="border:10px">
+        <div class="col-sm-4" style="padding:10px">
             <div id="checkboxes">
-                <form action = "/action_page.php">
-                    <select name = "Current Restaurants">
+                <form action = "/action_page.php"  >
+                    <select name = "Current Restaurants" style="background-color:white; cursor:pointer; border:3px;">
                         <option value = "KFC">KFC</option>
                         <option value = "burgerKing">Burger King</option>
                         <option value = "mcdonalds">McDonalds</option>
@@ -104,15 +114,15 @@ h1 {
                     <br></br>
                     <input type = "submit">
                 </form>
-
             </div>
         </div>
+
         <div class="col-sm-4">
             <form>
                 <header>
                     <label>Potential Restaurants</label>
                 </header>
-                <input type="text" name="newlunchopt"><br>
+                <input name="newlunchopt" type="text"><br>
                 <input type="submit" value="Submit">
             </form>
         </div>
