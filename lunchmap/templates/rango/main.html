@@ -1,20 +1,33 @@
 ﻿﻿<!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <title>Bootstrap Example</title>
+<header>
+  <title>Lunch!</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
+</header>
+
+<style>
+* {
+background-color: rgb(190,190,190);
+}
+
+h1 {
+    color: blue;
+    }
+</style>
 
 
 
+<body>
 
 <div class="container">
     <div class="row">
-        <h1>Lunch Map</h1>
+
+        <h1 class = "text-center">Lunch Map</h1>
     </div>
     <div class="row">
         <section class="col-sm-8">
@@ -24,7 +37,7 @@
             </p>
         </section>
         <header class="col-sm-4">
-            <h3>Ranking</h3>
+            <h3 class="text-center">Ranking</h3>
         </header>
     </div>
     <div class="row">
@@ -81,20 +94,23 @@
     <div class="row">
         <div class="col-sm-4">
             <div id="checkboxes">
+                <form action = "/action_page.php">
+                    <select name = "Current Restaurants">
+                        <option value = "KFC">KFC</option>
+                        <option value = "burgerKing">Burger King</option>
+                        <option value = "mcdonalds">McDonalds</option>
+                        <option value = "subway">Subway</option>
+                    </select>
+                    <br></br>
+                    <input type = "submit">
+                </form>
 
-                <label>Lunch Options</label>
-                    <ul >
-                        <li><input type="checkbox"> option 1</li>
-                        <li><input type="checkbox"> option 2</li>
-                        <li><input type="checkbox"> option 3</li>
-                        <li><input type="checkbox"> options 4</li>
-                    </ul>
             </div>
         </div>
         <div class="col-sm-4">
             <form>
                 <header>
-                    <label>New Lunch Option</label>
+                    <label>Potential Restaurants</label>
                 </header>
                 <input type="text" name="newlunchopt"><br>
                 <input type="submit" value="Submit">
@@ -102,3 +118,5 @@
         </div>
     </div>
 </div>
+
+</body>
