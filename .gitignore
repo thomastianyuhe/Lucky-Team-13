@@ -135,4 +135,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+lunchmap/rango/migrations*
 # End of https://www.gitignore.io/api/django

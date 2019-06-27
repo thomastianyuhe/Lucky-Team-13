@@ -13,4 +13,4 @@ def placePut(request):
                               rating= place.get("rating"))
         placeinstance.save()
         print("Created: " + str(placeinstance))
-    return render('rango/main.html', {})
+    return render('rango/main.html')
