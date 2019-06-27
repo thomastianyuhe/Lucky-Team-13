@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def main(request):
+    response = {}
+    return render(request, 'rango/main.html', response)
