@@ -12,3 +12,7 @@
 
 ## Presentation
 [edit](https://docs.google.com/presentation/d/1SYwgW0bT07DW1y8EGjupdq1ByLgqJQ6Zs5dkD5clcO8/edit?usp=sharing)
+
+resources
+
+https://github.com/wsvincent/djangoforbeginners/tree/master/ch7-blog-app-with-users
