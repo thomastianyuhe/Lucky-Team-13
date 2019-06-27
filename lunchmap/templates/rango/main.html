@@ -13,7 +13,9 @@
 * {
     font-family:tahoma;
     background-color:rgb(253, 252, 252);
+
 }
+
 
 h1 {
     background-image: url("burger.jpg");
@@ -25,6 +27,7 @@ h1 {
 #ranking-table td, #ranking-table th, #ranking-table tr, #ranking-table h3 {
 background-color:white;
 padding:10px;
+margin:0;
 }
 
 
@@ -53,7 +56,7 @@ padding:10px;
     <div class="row">
         <div class="col-sm-8">
             <div class="mapouter">
-                <div class="gmap_canvas"><iframe frameborder="0" height="500" id="gmap_canvas" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=JP%20Morgan%20glasgow&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600"></iframe><a href="https://www.enable-javascript.net">enable-javascript.net</a>
+                <div class="gmap_canvas"><iframe frameborder="0" height="500" id="gmap_canvas" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=restaurant&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600"></iframe><a href="https://www.enable-javascript.net">enable-javascript.net</a>
                 </div>
 
                 <style>
@@ -74,9 +77,10 @@ padding:10px;
             </div>
         </div>
 
-        <div id="ranking-table">
+        <div id="ranking-table" align="center">
+            <table class="col-sm-4" align="center">
                 <h3 class="text-center">Rankings</h3>
-            <table class="col-sm-4" >
+
                 <tr>
                     <th>Rank</th>
                     <th>Place</th>
